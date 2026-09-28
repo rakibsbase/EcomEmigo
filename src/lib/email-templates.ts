@@ -46,7 +46,7 @@ const EMAIL_STYLES = {
 
 /**
  * =========================================================================
- * 1. INBOUND LEAD BRIEFING (Sent to Admin: mohamed.noor194@gmail.com)
+ * 1. INBOUND LEAD BRIEFING (Sent to Admin: caliecomamigo@gmail.com)
  * Reply-To is set directly to the prospect's email.
  * =========================================================================
  */

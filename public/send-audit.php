@@ -195,13 +195,13 @@ function cleanLength($str, $max) {
 // 9. Resend & Company Configuration
 $resendApiKey = getenv('RESEND_API_KEY') ?: 're_Jh92NUuV_JSNAcra8Los4ckg4AgBC6crm';
 $fromEmail    = getenv('RESEND_FROM_EMAIL') ?: 'EcomAmigo <audits@ecomamigo.com>';
-$adminEmail   = getenv('AUDIT_ADMIN_EMAIL') ?: 'mohamed.noor194@gmail.com';
+$adminEmail   = getenv('AUDIT_ADMIN_EMAIL') ?: 'caliecomamigo@gmail.com';
 $calLink      = 'https://cal.com/franchise/ecom-amigo';
 $companyNameHeader = 'EcomAmigo';
 $companyLegalName  = 'EcomAmigo LLC';
 $companyAddress    = '9747 Businesspark Ave #255, California, USA';
 $companyPhone      = '+1 (619) 771-2691';
-$companyContactEmail = 'Noomoh194@gmail.com';
+$companyContactEmail = 'caliecomamigo@gmail.com';
 $companySiteUrl    = 'https://ecomamigo.com';
 $submittedAt       = gmdate('D, d M Y H:i:s T');
 $currentYear       = date('Y');
