@@ -19,7 +19,7 @@ export function SiteFooter() {
             >
               <div className="relative h-10 w-55 transition-opacity group-hover:opacity-90">
                 <Image
-                  src="/logos/logo_amigo.png"
+                  src="/logos/logo_amigo.webp"
                   alt={COMPANY.name}
                   fill
                   className="object-contain object-left brand-logo-img"

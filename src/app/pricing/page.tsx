@@ -21,7 +21,7 @@ export default function PricingPage() {
         aria-hidden="true"
       >
         <Image
-          src="/images/hero-bg-flipped.jpg"
+          src="/images/hero-bg-flipped.webp"
           alt="EcomAmigo predictable monthly retainer pricing backdrop"
           fill
           priority

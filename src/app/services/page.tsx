@@ -52,7 +52,7 @@ export default function ServicesPage() {
           aria-hidden="true"
         >
           <Image
-            src="/images/hero-bg-flipped.jpg"
+            src="/images/hero-bg-flipped.webp"
             alt="EcomAmigo marketplace operations and management services backdrop"
             fill
             priority

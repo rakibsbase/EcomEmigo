@@ -4,6 +4,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { constructMetadata, getBreadcrumbJsonLd } from "@/lib/seo";
 import { getCaseStudyBySlug, getAllCaseStudies } from "@/lib/case-studies-data";
+import { COMPANY } from "@/lib/constants";
 import { FeaturesStrip } from "@/components/home/features-strip";
 import { CtaBanner } from "@/components/home/cta-banner";
 import {
@@ -87,7 +88,7 @@ export default async function CaseStudyDetailPage({
       name: "EcomAmigo",
       logo: {
         "@type": "ImageObject",
-        url: "https://ecomamigo.com/logos/logo_amigo.png",
+        url: `${COMPANY.siteUrl}${COMPANY.logo}`,
       },
     },
     mainEntityOfPage: {

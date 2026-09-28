@@ -117,7 +117,7 @@ export const SERVICES_DATA: ServiceData[] = [
     heroTitle: "Full-Funnel Amazon Seller Central & FBA Operations",
     heroSubtitle:
       "We assume complete operational responsibility for your Amazon channel: COSMO/A9 search indexing, Buy Box defense, TACoS-controlled Sponsored Ads, and FBA restock forecasting.",
-    imageSrc: "/images/services/amazon-store-management.jpg",
+    imageSrc: "/images/services/amazon-store-management.webp",
     imageAlt: "Amazon Seller Central Analytics and Revenue Dashboard",
     stats: [
       {
@@ -427,7 +427,7 @@ export const SERVICES_DATA: ServiceData[] = [
     heroTitle: "End-to-End TikTok Shop Operations & Creator Affiliate Scaling",
     heroSubtitle:
       "Turn short-form content into a predictable revenue channel. We manage your TikTok Shop Seller Center, creator affiliate outreach pipeline, sample distribution, and live shopping strategy.",
-    imageSrc: "/images/services/tiktok-shop-operations.jpg",
+    imageSrc: "/images/services/tiktok-shop-operations.webp",
     imageAlt: "TikTok Shop Seller Center Creator Affiliate Dashboard",
     stats: [
       {
@@ -735,7 +735,7 @@ export const SERVICES_DATA: ServiceData[] = [
     heroTitle: "Walmart Marketplace Management & WFS Acceleration",
     heroSubtitle:
       "Expand into the US's fastest-growing retail marketplace. We handle Walmart catalog onboarding, Pro Seller badge qualification, Walmart Fulfillment Services (WFS), and Walmart Connect ads.",
-    imageSrc: "/images/services/walmart-marketplace.jpg",
+    imageSrc: "/images/services/walmart-marketplace.webp",
     imageAlt: "Walmart Marketplace Seller Center Performance Dashboard",
     stats: [
       {

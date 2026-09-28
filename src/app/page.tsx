@@ -24,7 +24,7 @@ export default function Home() {
         >
           {/* Base background image with soft blur and theme-adaptive opacity/filters */}
           <Image
-            src="/images/hero-bg-flipped.jpg"
+            src="/images/hero-bg-flipped.webp"
             alt="EcomAmigo e-commerce operations partner backdrop"
             fill
             priority

@@ -40,7 +40,7 @@ export default function CaseStudiesPage() {
           aria-hidden="true"
         >
           <Image
-            src="/images/hero-bg-flipped.jpg"
+            src="/images/hero-bg-flipped.webp"
             alt="EcomAmigo marketplace client case studies backdrop"
             fill
             priority
@@ -148,7 +148,6 @@ export default function CaseStudiesPage() {
                         fill
                         className="object-contain object-center sm:object-right"
                         sizes="(max-width: 639px) 100vw, 300px"
-                        priority
                       />
                     </div>
                   </div>

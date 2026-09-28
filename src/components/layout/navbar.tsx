@@ -139,7 +139,7 @@ export function Navbar({ navLinks = NAV_LINKS }: NavbarProps) {
           >
             <div className="relative h-7 w-37.5 sm:h-7.5 sm:w-40 md:h-8 md:w-43 lg:h-8.5 lg:w-46.25 transition-opacity group-hover:opacity-90">
               <Image
-                src="/logos/logo_amigo.png"
+                src="/logos/logo_amigo.webp"
                 alt={COMPANY.name}
                 fill
                 priority

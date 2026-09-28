@@ -39,7 +39,7 @@ export function TrustedResults() {
                 <div className="flex flex-col items-start mb-2.5">
                   <div className="relative w-[140px] sm:w-[160px] h-[65px] sm:h-[75px] mb-1.5">
                     <Image
-                      src="/logos/oudh.jpg"
+                      src="/logos/oudh.webp"
                       alt="OUD STORE"
                       fill
                       className="object-contain object-left"
@@ -71,7 +71,6 @@ export function TrustedResults() {
                     fill
                     className="object-contain object-center sm:object-right"
                     sizes="(max-width: 639px) 100vw, 300px"
-                    priority
                   />
                 </div>
               </div>
@@ -189,7 +188,7 @@ export function TrustedResults() {
                 <div className="flex flex-col items-start mb-2.5">
                   <div className="relative w-[140px] sm:w-[160px] h-[65px] sm:h-[75px] mb-1.5">
                     <Image
-                      src="/logos/organic.png"
+                      src="/logos/organic.webp"
                       alt="Thai Organic"
                       fill
                       className="object-contain object-left"
@@ -221,7 +220,6 @@ export function TrustedResults() {
                     fill
                     className="object-contain object-center sm:object-right"
                     sizes="(max-width: 639px) 100vw, 300px"
-                    priority
                   />
                 </div>
               </div>

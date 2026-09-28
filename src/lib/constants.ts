@@ -21,7 +21,7 @@ export const COMPANY: CompanyInfo = {
   calUsername: "franchise",
   calEventSlug: "ecom-amigo",
   siteUrl: "https://ecomamigo.com",
-  logo: "/logos/logo_amigo.png",
+  logo: "/logos/logo_amigo.webp",
   socialLinks: [
     {
       platform: "linkedin",

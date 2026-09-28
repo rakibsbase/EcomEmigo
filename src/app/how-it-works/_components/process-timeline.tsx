@@ -40,7 +40,7 @@ const STAGE_CONFIGS: Record<string, StageVisualConfig> = {
     headerIcon: ClipboardList,
     visualIcon: ClipboardCheck,
     metricBadge: "Full Audit Diagnostic",
-    imageSrc: "/images/stages/stage-1.jpg",
+    imageSrc: "/images/stages/stage-1.webp",
     imageAlt:
       "E-commerce operations specialist conducting a forensic store audit on multi-channel analytics dashboards",
   },
@@ -48,7 +48,7 @@ const STAGE_CONFIGS: Record<string, StageVisualConfig> = {
     headerIcon: Compass,
     visualIcon: Share2,
     metricBadge: "90-Day Channel Roadmap",
-    imageSrc: "/images/stages/stage-2.jpg",
+    imageSrc: "/images/stages/stage-2.webp",
     imageAlt:
       "E-commerce strategy team collaborating on multi-marketplace roadmap and growth milestones",
   },
@@ -56,7 +56,7 @@ const STAGE_CONFIGS: Record<string, StageVisualConfig> = {
     headerIcon: SlidersHorizontal,
     visualIcon: BarChart3,
     metricBadge: "A+ Content & SEO Repair",
-    imageSrc: "/images/stages/stage-3.jpg",
+    imageSrc: "/images/stages/stage-3.webp",
     imageAlt:
       "Marketplace operations dashboard tracking catalog optimization, buy box share, and revenue performance",
   },
@@ -64,7 +64,7 @@ const STAGE_CONFIGS: Record<string, StageVisualConfig> = {
     headerIcon: ShieldCheck,
     visualIcon: CheckCircle2,
     metricBadge: "24/7 SLA & Inventory Defense",
-    imageSrc: "/images/stages/stage-4.jpg",
+    imageSrc: "/images/stages/stage-4.webp",
     imageAlt:
       "EcomAmigo operations team collaborating on marketplace dashboards and inventory feeds in California",
   },
@@ -72,7 +72,7 @@ const STAGE_CONFIGS: Record<string, StageVisualConfig> = {
     headerIcon: TrendingUp,
     visualIcon: Rocket,
     metricBadge: "Multi-Channel Velocity",
-    imageSrc: "/images/stages/stage-5.jpg",
+    imageSrc: "/images/stages/stage-5.webp",
     imageAlt:
       "EcomAmigo executive operations war room at 9747 Businesspark Ave #255 in California",
   },

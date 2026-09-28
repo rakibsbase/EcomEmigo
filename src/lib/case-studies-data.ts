@@ -93,7 +93,7 @@ export const CASE_STUDIES: CaseStudyData[] = [
     clientName: "Oud Store",
     websiteUrl: "https://OudStore.com",
     websiteDisplay: "OudStore.com",
-    logoSrc: "/logos/oudh.jpg",
+    logoSrc: "/logos/oudh.webp",
     mockupSrc: "/images/case-study-1.webp",
     tagline: "Luxury Fragrances & Niche Perfumery",
     heroTitle: "Scaling Oud Store: Operational Overhaul & Multi-Channel Growth",
@@ -282,7 +282,7 @@ export const CASE_STUDIES: CaseStudyData[] = [
     clientName: "Thai Organic",
     websiteUrl: "https://thai-organics.com",
     websiteDisplay: "ThaiOrganic.com",
-    logoSrc: "/logos/organic.png",
+    logoSrc: "/logos/organic.webp",
     mockupSrc: "/images/case-study-2.webp",
     tagline: "Pure, Natural Skincare & Wellness from Thailand",
     heroTitle:

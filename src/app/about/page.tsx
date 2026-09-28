@@ -76,7 +76,7 @@ export default function AboutPage() {
           aria-hidden="true"
         >
           <Image
-            src="/images/hero-bg-flipped.jpg"
+            src="/images/hero-bg-flipped.webp"
             alt="EcomAmigo marketplace management operations office"
             fill
             priority
@@ -217,12 +217,11 @@ export default function AboutPage() {
               <div className="bg-paper rounded-2xl sm:rounded-3xl border border-border p-3 sm:p-4 shadow-xs">
                 <div className="relative aspect-16/11 w-full overflow-hidden rounded-xl sm:rounded-2xl bg-surface">
                   <Image
-                    src="/images/operations-story.jpg"
+                    src="/images/operations-story.webp"
                     alt="EcomAmigo California operations team collaborating on marketplace dashboard"
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 42vw"
-                    priority
                   />
                   <div className="absolute inset-0 bg-linear-to-t from-black/75 via-transparent to-transparent pointer-events-none" />
 
