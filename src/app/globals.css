@@ -1,0 +1,391 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-ink-subtle: var(--ink-subtle);
+  --color-paper: var(--paper);
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+  --color-border: var(--border);
+  --color-border-clean: var(--border-clean);
+  --color-border-subtle: var(--border-subtle);
+  --color-accent: var(--accent);
+  --color-accent-deep: var(--accent-deep);
+  --color-accent-subtle: var(--accent-subtle);
+
+  --font-heading:
+    var(--font-inter-tight), -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
+  --font-sans:
+    var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
+}
+
+@utility max-w-11/12 {
+  max-width: 91.666667%;
+}
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #10151c;
+
+    --ink: #10151c;
+    --ink-muted: #4f5662;
+    --ink-subtle: #59616e;
+    --paper: #ffffff;
+    --surface: #f5f6f8;
+    --surface-hover: #eceef2;
+    --border: #e4e6ea;
+    --border-clean: #e4e6ea;
+    --border-subtle: #edeff2;
+    --accent: #1e4fd8;
+    --accent-deep: #15379c;
+    --accent-subtle: #eff4fe;
+  }
+
+  .dark {
+    --background: #0b0f15;
+    --foreground: #f3f4f6;
+
+    --ink: #f9fafb;
+    --ink-muted: #9ca3af;
+    --ink-subtle: #94a3b8;
+    --paper: #111722;
+    --surface: #161e2c;
+    --surface-hover: #1e293b;
+    --border: #222c3c;
+    --border-clean: #283548;
+    --border-subtle: #192230;
+    --accent: #2563eb;
+    --accent-deep: #3b82f6;
+    --accent-subtle: rgba(37, 99, 235, 0.15);
+  }
+
+  * {
+    border-color: var(--border);
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+    color: var(--ink);
+  }
+}
+
+/* Dark mode enhancements */
+.dark {
+  /* Logo inversion filter: black text turns white, blue swoosh stays exact brand blue */
+  .brand-logo-img {
+    filter: invert(1) hue-rotate(180deg);
+  }
+
+  /* Custom dark scrollbar */
+  [scrollbar-color] {
+    scrollbar-color: var(--border) transparent;
+  }
+}
+
+/* Page scroll behavior: instant by default to ensure route transitions & reloads start at top (scrollY = 0) without animation lag or mid-flight interruptions */
+html {
+  scroll-behavior: auto;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root:has(:target) {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Hero entrance motion (GPU-accelerated native CSS replacing framer-motion) */
+@keyframes hero-entrance-fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-hero-entrance {
+  animation: hero-entrance-fade-up 500ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform, opacity;
+}
+
+/* Hero heading animations */
+@keyframes hero-underline-expand {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes hero-gradient-shift {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 100% center;
+  }
+}
+
+.hero-accent-text {
+  background: linear-gradient(105deg, #2457e6 0%, #4f7cff 50%, #2457e6 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  animation: hero-gradient-shift 4.5s ease-in-out 900ms infinite alternate;
+}
+
+.hero-underline {
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  height: 2px;
+  width: 0%;
+  background: linear-gradient(90deg, #2457e6 0%, #4f7cff 100%);
+  border-radius: 9999px;
+  animation: hero-underline-expand 500ms cubic-bezier(0.22, 1, 0.36, 1) 780ms
+    forwards;
+  pointer-events: none;
+}
+
+/* Clickable Callout Accent (matches hero "like it's ours.") */
+.cta-accent-text {
+  background: linear-gradient(105deg, #2457e6 0%, #4f7cff 50%, #2457e6 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  animation: hero-gradient-shift 4.5s ease-in-out infinite alternate;
+}
+
+.cta-accent-underline {
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 2px;
+  width: 0%;
+  background: linear-gradient(90deg, #2457e6 0%, #4f7cff 100%);
+  border-radius: 9999px;
+  animation: hero-underline-expand 600ms cubic-bezier(0.22, 1, 0.36, 1) 300ms
+    forwards;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .hero-accent-text,
+  .cta-accent-text,
+  .animate-hero-entrance {
+    animation: none !important;
+    background-position: 0% center !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .hero-underline,
+  .cta-accent-underline {
+    width: 100% !important;
+    animation: none !important;
+  }
+  .animate-marquee-scroll,
+  .animate-services-left,
+  .animate-services-right,
+  .animate-reviews-scroll,
+  .animate-hero-float-main {
+    animation: none !important;
+    transform: none !important;
+    flex-wrap: wrap !important;
+    width: 100% !important;
+  }
+}
+
+/* Marketplace & Platform Logo Marquee */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-scroll {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 24s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* Services Dual-Row Marquee Sliders */
+@keyframes services-scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes services-scroll-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-services-left {
+  display: flex;
+  width: max-content;
+  animation: services-scroll-left 44s linear infinite;
+  will-change: transform;
+}
+
+.animate-services-right {
+  display: flex;
+  width: max-content;
+  animation: services-scroll-right 44s linear infinite;
+  will-change: transform;
+}
+
+.animate-services-left:hover,
+.animate-services-right:hover {
+  animation-play-state: paused;
+}
+
+/* Reviews Continuous Sliding Carousel */
+@keyframes reviews-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-reviews-scroll {
+  display: flex;
+  width: max-content;
+  animation: reviews-scroll 42s linear infinite;
+  will-change: transform;
+}
+
+.animate-reviews-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* ─────────────────────────────────────────────
+   Hero Operations Visual — Subtle Dashboard Float
+   (Ultra-subtle 0 -> -3px -> 0 over 9s, GPU-accelerated)
+───────────────────────────────────────────── */
+@keyframes hero-float-main {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+.animate-hero-float-main {
+  animation: hero-float-main 9s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* ─────────────────────────────────────────────
+   Mobile Navigation Slide-Over Drawer (Right to Left)
+───────────────────────────────────────────── */
+@keyframes drawer-slide-right-to-left {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-drawer-in {
+  animation: drawer-slide-right-to-left 0.28s cubic-bezier(0.16, 1, 0.3, 1)
+    forwards;
+  will-change: transform;
+}
+
+@keyframes fade-in-overlay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in-overlay {
+  animation: fade-in-overlay 0.22s ease-out forwards;
+}
+
+/* ─────────────────────────────────────────────
+   Toast Notifications (GPU-Accelerated)
+───────────────────────────────────────────── */
+@keyframes toast-slide-in {
+  from {
+    transform: translateY(16px) scale(0.96);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-toast-in {
+  animation: toast-slide-in 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform, opacity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-toast-in {
+    animation: none !important;
+    transition: none !important;
+  }
+}
