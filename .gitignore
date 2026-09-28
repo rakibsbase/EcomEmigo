@@ -44,4 +44,8 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-.vercel
+# server & sensitive public files
+public/send-audit.php
+public/.htaccess
+.htaccess
+*.php
